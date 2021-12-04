@@ -1,0 +1,186 @@
+:root {
+  --clr-intro: #fff;
+  
+  --clr-aie-s: hsl(215, 82%, 68%);
+  --clr-aie-c: hsl(215, 82%, 57%);
+  --clr-aie-a: hsl(215, 82%, 46%);
+  --clr-aie-u: hsl(215, 82%, 35%);
+  --clr-rurikon: hsl(215, 82%, 24%);
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("assets/fonts/Montserrat/Montserrat-Regular.ttf"),
+       url("assets/fonts/Montserrat/Montserrat-Medium.ttf"),
+       url("assets/fonts/Montserrat/Montserrat-SemiBold.ttf"),
+       url("assets/fonts/Montserrat/Montserrat-Bold.ttf");
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 100%;
+	}
+	25% {
+		background-position: 25% 75%;
+	}
+	50% {
+		background-position: 50% 50%;
+	}
+	75% {
+		background-position: 75% 25%;
+	}
+	100% {
+		background-position: 100% 0%;
+	}
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(45deg, var(--clr-aie-s), var(--clr-aie-c), var(--clr-aie-a), var(--clr-aie-u), var(--clr-rurikon));
+  background-size: 400% 400%;
+
+  animation: gradient 7s linear infinite alternate;
+}
+
+/* .main */
+.main {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro {
+  width: 90%;
+  height: 80%;
+  text-align: center;
+
+  font-size: 10vw;
+  font-weight:400;
+  color: var(--clr-intro);
+  cursor: default;
+}
+
+#scau {
+  font-weight: 700;
+}
+
+#aie {
+  font-size: 24vw;
+  font-weight: 700;
+  letter-spacing: 2vw;
+}
+
+#trailer {
+  position: absolute;
+  bottom: 18vh;
+  left: 60vw;
+
+  font-size: 2.4vw;
+  font-weight: 500;
+  letter-spacing: 0.2vw;
+}
+
+/* footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 9vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #fff;
+  cursor: default;
+}
+
+.footer .copyright {
+  width: 50%;
+  margin-right: 8vw;
+  text-align: right;
+  
+  font-size: 3.6vh;
+  font-weight: 600;
+  color: #000;
+}
+
+.footer .link {
+  width: 50%;
+  text-align: left;
+}
+
+.footer .link img {
+  width: 3.6vh;
+  height: 3.6vh;
+  margin: 0.8vw;  
+}
+
+.footer .sep {
+  position: absolute;
+  font-size: 3.2vh;
+}
+
+@media (orientation: landscape) {
+  .landscape {
+    display: block;
+  }
+  .portrait {
+    display: none;
+  }
+  .typed-text::before {
+    content: '';
+    font-size: 24vw;
+  }
+}
+
+@media (orientation: portrait) {
+  .landscape {
+    display: none;
+  }
+  .portrait {
+    display: block;
+  }
+  .intro {
+    font-size: 20vw;
+    line-height: 14vh;
+  }
+  #aie {
+    font-size: 48vw;
+    line-height: 24vh;
+  }
+  #trailer {
+    bottom: 9vh;
+    left: 32vw;
+
+    font-size: 4.8vw;
+  }
+  .footer .copyright {
+    font-size: 4.8vw;
+  }
+  .footer .link img {
+    width: 4.8vw;
+    height: 4.8vw;
+  }
+  .footer .sep {
+    font-size: 4.2vw;
+  }
+}
