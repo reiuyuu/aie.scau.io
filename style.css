@@ -1,12 +1,4 @@
-@font-face {
-  font-family: "Montserrat";
-  src: url("assets/fonts/Montserrat/Montserrat-Regular.ttf"),
-       url("assets/fonts/Montserrat/Montserrat-Medium.ttf"),
-       url("assets/fonts/Montserrat/Montserrat-SemiBold.ttf"),
-       url("assets/fonts/Montserrat/Montserrat-Bold.ttf");
-}
-
-:root {  
+:root {
   --clr-aie-s: hsl(215, 82%, 68%);
   --clr-aie-c: hsl(215, 82%, 57%);
   --clr-aie-a: hsl(215, 82%, 46%);
@@ -15,21 +7,21 @@
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 100%;
-	}
-	25% {
-		background-position: 25% 75%;
-	}
-	50% {
-		background-position: 50% 50%;
-	}
-	75% {
-		background-position: 75% 25%;
-	}
-	100% {
-		background-position: 100% 0%;
-	}
+  0% {
+    background-position: 0% 100%;
+  }
+  25% {
+    background-position: 25% 75%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  75% {
+    background-position: 75% 25%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
 }
 
 * {
@@ -45,9 +37,16 @@ body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
-  
+
   font-family: "Montserrat", sans-serif;
-  background: linear-gradient(45deg, var(--clr-aie-s), var(--clr-aie-c), var(--clr-aie-a), var(--clr-aie-u), var(--clr-rurikon));
+  background: linear-gradient(
+    45deg,
+    var(--clr-aie-s),
+    var(--clr-aie-c),
+    var(--clr-aie-a),
+    var(--clr-aie-u),
+    var(--clr-rurikon)
+  );
   background-size: 400% 400%;
 
   animation: gradient 7s linear infinite alternate;
@@ -113,7 +112,7 @@ body {
   width: 50%;
   margin-right: 8vw;
   text-align: right;
-  
+
   font-size: 3.6vh;
   font-weight: 500;
   color: #000;
@@ -127,7 +126,7 @@ body {
 .footer .footer-link img {
   width: 3.6vh;
   height: 3.6vh;
-  margin: 0.8vw;  
+  margin: 0.8vw;
 }
 
 .footer .sep {
@@ -143,7 +142,7 @@ body {
     display: none;
   }
   .typed-text::before {
-    content: '';
+    content: "";
     font-size: 13vw;
   }
 }
